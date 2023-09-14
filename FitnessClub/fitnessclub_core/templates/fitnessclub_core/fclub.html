@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header>
+    <h1>Краткая информация о последнем размещенном предложении</h1>
+</header>
+
+<div>
+    <h2>Реклама</h2>
+    <img src="{% static 'images/Ad1.png' %}" width="100" height="100" alt="Баннер_1">
+    <img src="{% static 'images/Ad2.png' %}" width="100" height="100" alt="Баннер_2">
+    <img src="{% static 'images/Ad3.png' %}"width="100" height="100" alt="Баннер_3">
+</div>
+<section>
+    <h2>Список компаний партнеров</h2>
+    <ul>
+        <li>
+            <a href="https://www.sportmaster.by/">
+                <img src="{% static 'images/sportmaster_logo.jpg' %}" width="40" height="36" alt="Логотип спортмастера">
+            </a>
+            <figcaption>SportMaster</figcaption>
+        </li>
+        <li>
+            <a href="https://www.gym24.by/">
+                <img src="{% static 'images/gym24_logo.png' %}" width="50" height="40" alt="Логотип gym24">
+            </a>
+            <figcaption>Gym24</figcaption>
+        </li>
+        <li>
+            <a href="https://www.nestle.com/">
+                <img src="{% static 'images/nestle_logo.png' %}" width="60" height="40" alt="Логотип nestle">
+            </a>
+            <figcaption>Nestle</figcaption>
+        </li>
+    </ul>
+</section>
+
+{% endblock %}

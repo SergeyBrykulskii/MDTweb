@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>{{ group_class.name }}</h1>
+<p>Description: {{ group_class.description }}</p>
+<p>Cost: {{ group_class.cost }}</p>
+<p>Gym: <a href="{{ group_class.gym.get_absolute_url }}">{{ group_class.gym.name }}</a></p>
+{%if user.is_authenticated%}
+    <form action="{% url 'cart:cart_add' group_class.id %}" method="post">
+        <br>
+        {% csrf_token %}
+        <input type="submit" value="Add to cart">
+        {{ add_to_cart_form.as_p }}
+    </form>
+    {%endif%}
+{% if request.user.is_staff %}
+    <p><a href="{% url 'fitnessclub_core:edit_group_class' group_class.id %}", class="button">Edit</a></p>
+    <form action="{% url 'fitnessclub_core:delete_group_class' group_class.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+{% endif %}
+{% endblock %}

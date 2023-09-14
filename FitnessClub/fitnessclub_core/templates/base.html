@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Home{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <a href="/fclub/" class="logo">F-club</a>
+        <a href="/" class="logo">Home</a>
+        <a href="/cart/" class="logo">Cart</a>
+        <p><span id="date"></span></p>
+        <p><span id="time"></span></p>
+        <p><span id="zone"></span></p>
+        <script>
+            const today = new Date();
+            const formattedToday = today.toLocaleDateString();
+            const time = today.toLocaleTimeString();
+            const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            document.getElementById("date").textContent = formattedToday;
+            document.getElementById("time").textContent = time;
+            document.getElementById("zone").textContent = tz;
+        </script>
+        <div class="cart">
+            {% if user.is_authenticated %}
+                Hello, {{ user.username }}
+                <a href="{% url 'login:logout' %}">Log out</a>
+            {% else %}
+                <a href="{% url 'login:registration' %}">Registration</a>
+                <a href="{% url 'login:login' %}">Log in</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

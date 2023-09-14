@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>{{ gym.name }}</h2>
+<p>Address: {{ gym.address }}</p>
+<p>Schedule: {{ gym.schedule.open_time }} - {{ gym.schedule.close_time }}</p>
+
+<h3>Group Classes:</h3>
+<ul>
+    {% for group_class in group_class_list %}
+    <li>
+        <h4><a href="{{ group_class.get_absolute_url }}">{{ group_class.name }}</a></h4>
+    </li>
+    {% empty %}
+    <li>No group classes available.</li>
+    {% endfor %}
+</ul>
+{% if request.user.is_staff %}
+<a href="{% url 'fitnessclub_core:create_group_class' %}" class="button">Create Group Class</a>
+{% endif %}
+{% endblock %}

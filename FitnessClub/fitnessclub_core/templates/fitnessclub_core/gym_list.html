@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Gym List</h1>
+
+<ul>
+    {% for gym in gym_list %}
+    <li>
+        <h2><a href="{{ gym.get_absolute_url }}">{{ gym.name }}</a></h2>
+        <p>Address: {{ gym.address }}</p>
+        <p>Schedule: {{ gym.schedule.open_time }} - {{ gym.schedule.close_time }}</p>
+        {% if gym.schedule.is_works_on_weekends %}
+        <p>Works on weekends</p>
+        {% else %}
+        <p>Doesn't work on weekends</p>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

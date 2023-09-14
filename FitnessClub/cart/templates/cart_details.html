@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+Cart
+{% endblock %}
+{% block content %}
+<style>
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+<h1>Cart</h1>
+<table class="cart">
+    <thead>
+        <tr>
+            <th>GroupClass</th>
+            <th>Quantity</th>
+            <th>Cost of one</th>
+            <th>Total cost</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart %}
+        {% with group_class=item.group_class %}
+        <tr>
+            <td>{{ group_class.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td class="num">{{ item.cost }}</td>
+            <td class="num">{{ item.total_cost }}</td>
+            <td><a href="{% url 'cart:cart_remove' trip.id %}">Remove</a></td>
+        </tr>
+        {% endwith %}
+        {% endfor %}
+        <tr class="total">
+            <td><br><br>Total</td>
+            <td colspan="3"></td>
+            <td class="num" colspan="2"><br><br>{{ cart.get_total_cost }}</td>
+        </tr>
+    </tbody>
+</table>
+<p class="text-right">
+    <br>
+    <a href="{% url 'fitnessclub_core:gym_list' %}" class="button light">Back to group class list</a>
+    <br>
+    <br>
+    <a href="{% url 'order:create_order' %}" class="button light">Order</a>
+</p>
+{% endblock %}
