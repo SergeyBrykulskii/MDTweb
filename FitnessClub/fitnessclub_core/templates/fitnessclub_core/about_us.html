@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>О компании</h1>
+
+<h2>Информация о компании</h2>
+<p>F-club это современный фитнес-клуб, предоставляющий широкий спектр услуг для здоровья и фитнеса. Наша миссия - помочь нашим клиентам достичь своих фитнес-целей и поддерживать здоровый образ жизни.</p>
+
+<h2>Видео</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4-zjQvTDnbw?si=Zbc-UskMudW2-syU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2>Логотип</h2>
+<img src="{% static 'images/logo.png' %}" alt="Логотип" width="200" height="200">
+
+<h2>История по годам</h2>
+<ul>
+    <li>2003: Появление первого зала</li>
+    <li>Год 2008: Крупная городская сеть</li>
+    <li>Год 2023: Филиалы в 20 странах на 3x континентах</li>
+    <!-- Добавьте другие годы и описания событий -->
+</ul>
+
+<h2>Реквизиты</h2>
+<address>
+    <p>Адрес: г. Веб, ул. Верстательная, д. 42</p>
+    <p>Тел. для справок: +375(33)-419-4304</p>
+    <p>Email:  info@fclub.com </p>
+</address>
+
+<h2>Сертификат</h2>
+<p>Здесь будет сертификат:)</p>
+
+{% endblock %}

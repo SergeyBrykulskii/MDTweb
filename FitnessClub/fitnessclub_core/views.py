@@ -96,3 +96,6 @@ def delete_group_class(request, id):
     
 def fclub(request):
     return render(request, 'fitnessclub_core/fclub.html')
+
+def about_us(request):
+    return render(request, 'fitnessclub_core/about_us.html')
