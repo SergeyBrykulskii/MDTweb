@@ -4,6 +4,7 @@ from django.core.exceptions import PermissionDenied
 from .models import Gym, GymMembership, News, Schedule, GroupClass
 from .forms import GymMembershipForm, GroupClassForm
 from cart.forms import AddGroupClassForm
+from login.models import Client
 
 def gym_list(request):
     gym_list = Gym.objects.all()
@@ -106,3 +107,7 @@ def promotions (request):
 def news_list(request):
     news_list = News.objects.all()
     return render(request, 'fitnessclub_core/news_list.html', {'news_list': news_list})
+
+def employee_list(request):
+    employees = Client.objects.filter(is_staff=True)
+    return render(request, 'fitnessclub_core/employee_list.html', {'employees': employees})
