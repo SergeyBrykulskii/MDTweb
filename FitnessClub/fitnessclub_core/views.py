@@ -117,3 +117,6 @@ def privacy_policy(request):
 
 def vacancies(request):
     return render(request, 'fitnessclub_core/vacancies.html')
+
+def faq(request):
+    return render(request, 'fitnessclub_core/faq.html')
