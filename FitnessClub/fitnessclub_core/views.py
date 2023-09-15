@@ -111,3 +111,6 @@ def news_list(request):
 def employee_list(request):
     employees = Client.objects.filter(is_staff=True)
     return render(request, 'fitnessclub_core/employee_list.html', {'employees': employees})
+
+def privacy_policy(request):
+    return render(request, 'fitnessclub_core/privacy_policy.html')
