@@ -14,4 +14,5 @@ urlpatterns = [
     path('fclub/', views.fclub, name='fclub'),
     path('about_us/', views.about_us, name='about_us'),
     path('promotions', views.promotions, name='promotions'),
+    path('news_list/', views.news_list, name='news_list'),
 ]

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.core.exceptions import PermissionDenied
-from .models import Gym, GymMembership, Schedule, GroupClass
+from .models import Gym, GymMembership, News, Schedule, GroupClass
 from .forms import GymMembershipForm, GroupClassForm
 from cart.forms import AddGroupClassForm
 
@@ -102,3 +102,7 @@ def about_us(request):
 
 def promotions (request):
     return render(request, 'fitnessclub_core/promotions.html')
+
+def news_list(request):
+    news_list = News.objects.all()
+    return render(request, 'fitnessclub_core/news_list.html', {'news_list': news_list})
