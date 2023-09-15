@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+/* @import url(http://fonts.googleapis.com/css?family=Ubuntu); */
 
 body {
     margin:0;
@@ -118,7 +118,7 @@ ul.errorlist {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
-    font-size:22px;
+    font-size:15px;
     margin-right:10%;
 }
 

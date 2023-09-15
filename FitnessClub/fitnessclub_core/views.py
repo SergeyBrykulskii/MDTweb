@@ -99,3 +99,6 @@ def fclub(request):
 
 def about_us(request):
     return render(request, 'fitnessclub_core/about_us.html')
+
+def promotions (request):
+    return render(request, 'fitnessclub_core/promotions.html')
