@@ -114,3 +114,6 @@ def employee_list(request):
 
 def privacy_policy(request):
     return render(request, 'fitnessclub_core/privacy_policy.html')
+
+def vacancies(request):
+    return render(request, 'fitnessclub_core/vacancies.html')
