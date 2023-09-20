@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.core.exceptions import PermissionDenied
+from django.contrib.auth.decorators import login_required
 from .models import Gym, GymMembership, News, Schedule, GroupClass
 from .forms import GymMembershipForm, GroupClassForm
 from cart.forms import AddGroupClassForm
@@ -120,3 +121,10 @@ def vacancies(request):
 
 def faq(request):
     return render(request, 'fitnessclub_core/faq.html')
+
+def review_list(request):
+    return render(request, 'fitnessclub_core/review_list.html')
+
+@login_required
+def add_review(request):
+    return render(request, 'fitnessclub_core/add_review.html')

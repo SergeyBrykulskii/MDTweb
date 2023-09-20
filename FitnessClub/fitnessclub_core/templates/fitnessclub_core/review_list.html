@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Отзывы
+{% endblock %}
+
+{% block content %}
+<h1>Отзывы</h1>
+
+<!-- Список существующих отзывов -->
+<div class="reviews">
+    {% for review in reviews %}
+    <div class="review">
+        <p><strong>Имя: {{ review.name }}</strong></p>
+        <p>Оценка: {{ review.rating }}/5</p>
+        <p>{{ review.text }}</p>
+        <p>Дата: {{ review.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Кнопка "Добавить отзыв" -->
+<a href="/add_review" class="btn btn-primary">Добавить отзыв</a>
+{% endblock %}
