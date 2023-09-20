@@ -4,6 +4,9 @@ body {
     margin:0;
     padding:0;
     font-family:helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 , h6 {
@@ -97,8 +100,7 @@ ul.errorlist {
    padding:0;
 }
 
-
-#header {
+header {
     display: flex;
     justify-content: space-between;
     background:#ececec;
@@ -114,7 +116,7 @@ ul.errorlist {
     overflow:auto;
 }
 
-#header .logo {
+header .logo {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
@@ -125,6 +127,23 @@ ul.errorlist {
 #subheader .cart {
     float:right;
     padding-top:4px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background:#ececec;
+    padding:10px 100px;
+    font-size:18px;
+    overflow:auto;
+}
+
+footer .logo {
+    font-family: 'Ubuntu', sans-serif;
+    float:left;
+    color:#333;
+    font-size:15px;
+    margin-right:10%;
 }
 
 #content {
@@ -160,6 +179,10 @@ ul.errorlist {
 
 #sidebar ul li.selected a {
     color:#fff;
+}
+
+main {
+    flex-grow: 1;
 }
 
 #main {

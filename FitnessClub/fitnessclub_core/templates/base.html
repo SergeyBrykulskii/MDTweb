@@ -7,19 +7,13 @@
     <title>{% block title %}Home{% endblock %}</title>
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
-
 <body>
-    <div id="header">
+    <header>
         <nav class="menu">
-            <!-- Подумать о том чтобы перегруппировать это чудо(возможно что-то вынести в отделььное приложение) -->
+            <!-- Пока поделил между хедером и футером -->
             <a href="/fclub" class="logo">F-club</a>
-            <a href="/about_us" class="logo">About us</a>
             <a href="/promotions" class="logo">Promotions</a>
             <a href="/news_list" class="logo">News</a>
-            <a href="/employees" class="logo">Employees</a>
-            <a href="/privacy_policy" class="logo">Privacy Policy</a>
-            <a href="/vacancies" class="logo">Vacancies</a>
-            <a href="/faq" class="logo">FAQ</a>
             <a href="/review_list" class="logo">Reviews</a>
             <a href="/" class="logo">Home</a>
             <a href="/cart" class="logo">Cart</a>
@@ -46,12 +40,19 @@
                 <a href="{% url 'login:login' %}">Log in</a>
             {% endif %}
         </div>
-    </div>
-
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
+    </header>
+    <main>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <a href="/about_us" class="logo">About us</a>
+        <a href="/privacy_policy" class="logo">Privacy Policy</a>
+        <a href="/faq" class="logo">FAQ</a>
+        <a href="/employees" class="logo">Employees</a>
+        <a href="/vacancies" class="logo">Vacancies</a>
+    </footer>
 </body>
-
 </html>
