@@ -6,7 +6,6 @@ About us
 {% endblock %}
 
 {% block content %}
-
 <h1>О компании</h1>
 
 <h2>Информация о компании</h2>
@@ -15,8 +14,12 @@ About us
 <h2>Видео</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4-zjQvTDnbw?si=Zbc-UskMudW2-syU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
- <h2>Логотип</h2>
-<img src="{% static 'images/logo.png' %}" alt="Логотип" width="200" height="200">
+
+<h2>Логотип</h2>
+<div itemscope itemtype="http://schema.org/ImageObject">
+    <img src="{% static 'images/logo.png' %}" alt="Логотип" width="200" height="200" itemprop="contentUrl">
+    <meta itemprop="name" content="Логотип F-club">
+</div>
 
 <h2>История по годам</h2>
 <ul>
@@ -26,10 +29,10 @@ About us
 </ul>
 
 <h2>Реквизиты</h2>
-<address>
-    <p>Адрес: г. Веб, ул. Верстательная, д. 42</p>
-    <p>Тел. для справок: +375(33)-419-4304</p>
-    <p>Email:  info@fclub.com </p>
+<address itemscope itemtype="http://schema.org/PostalAddress">
+    <p itemprop="streetAddress">Адрес: г. Веб, ул. Верстательная, д. 42</p>
+    <p itemprop="telephone">Тел. для справок: +375(33)-419-4304</p>
+    <p itemprop="email">Email: info@fclub.com</p>
 </address>
 
 <h2>Сертификат</h2>

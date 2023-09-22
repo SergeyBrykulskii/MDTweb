@@ -4,9 +4,16 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="description"
+        content="F-club - это путь к здорову телу, здоровой жизни и душевному спокойствию. Составим Вам лучшую программу тренировок вместе!!!">
+    <meta name="keywords"
+        content="F-club, спортивный клуб, абонементы, фитнес, спортзалы, тренировки, инструкторы, тренажерные залы, спорт, тренажерки">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Home{% endblock %}</title>
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'images/logo.ico' %}" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <nav class="menu">
@@ -33,11 +40,11 @@
         </script>
         <div class="cart">
             {% if user.is_authenticated %}
-                Hello, {{ user.username }}
-                <a href="{% url 'login:logout' %}">Log out</a>
+            Hello, {{ user.username }}
+            <a href="{% url 'login:logout' %}">Log out</a>
             {% else %}
-                <a href="{% url 'login:registration' %}">Registration</a>
-                <a href="{% url 'login:login' %}">Log in</a>
+            <a href="{% url 'login:registration' %}">Registration</a>
+            <a href="{% url 'login:login' %}">Log in</a>
             {% endif %}
         </div>
     </header>
@@ -55,4 +62,5 @@
         <a href="/vacancies" class="logo">Vacancies</a>
     </footer>
 </body>
+
 </html>
