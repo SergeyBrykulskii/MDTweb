@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
 from .models import Gym, GymMembership, News, Review, Schedule, GroupClass
-from .forms import GymMembershipForm, GroupClassForm
+from .forms import GymMembershipForm, GroupClassForm, ReviewForm
 from cart.forms import AddGroupClassForm
 from login.models import Client
 
@@ -136,4 +136,13 @@ def review_list(request):
 
 @login_required
 def add_review(request):
-    return render(request, 'fitnessclub_core/add_review.html')
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.reviewer = request.user
+            review.save() 
+            return redirect('fitnessclub_core/review_list') 
+    else:
+        form = ReviewForm()
+    return render(request, 'fitnessclub_core/add_review.html', {'form': form})

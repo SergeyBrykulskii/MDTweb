@@ -8,8 +8,6 @@
 {% block content %}
 <section>
     <h1>Отзывы</h1>
-    
-    <!-- Список существующих отзывов -->
     <div class="reviews">
         {% for review in reviews %}
         <div class="review">
@@ -22,6 +20,5 @@
     </div>
 </section>
 
-<!-- Кнопка "Добавить отзыв" -->
 <a href="/add_review" class="btn btn-primary">Добавить отзыв</a>
 {% endblock %}
