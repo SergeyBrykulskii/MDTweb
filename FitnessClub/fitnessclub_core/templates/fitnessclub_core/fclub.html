@@ -7,8 +7,14 @@ F-club
 
 {% block content %}
 
-<h1>Краткая информация о последней размещенной новости</h1>
-<!-- Добавить инфу о новости -->
+
+<section>
+    <h1>Краткая информация о последней размещенной новости</h1>
+    <div>
+        <h2>{{ latest_news.title }}</h2>
+        <p>{{ latest_news.content }}</p>
+    </div>
+</section>
 
 <section>
     <div>

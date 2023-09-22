@@ -97,7 +97,11 @@ def delete_group_class(request, id):
         return HttpResponseNotFound('<h1>Group class not found</h1>')
     
 def fclub(request):
-    return render(request, 'fitnessclub_core/fclub.html')
+    latest_news = News.objects.latest('created_at')
+
+    context = { 'latest_news': latest_news }
+
+    return render(request, 'fitnessclub_core/fclub.html', context)
 
 def about_us(request):
     return render(request, 'fitnessclub_core/about_us.html')
