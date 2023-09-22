@@ -76,3 +76,8 @@ class Review(models.Model):
     content = models.TextField()
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     created_date = models.DateField(auto_now_add=True)
+
+class Faq(models.Model):
+    question = models.CharField(max_length=66)
+    answer = models.CharField(max_length=666)
+    created_date = models.DateField(auto_now_add=True)

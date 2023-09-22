@@ -8,18 +8,13 @@
 {% block content %}
 <section>
     <h1>Словарь терминов и понятий</h1>
-    <!-- земенить на модельку -->
+    {% for faq_item in faq %}
     <div class="faq-item">
-        <h2>Вопрос 1?</h2>
-        <p>Ответ</p>
-        <p>Дата добавления: 14.09.2023</p>
+        <h2>{{ faq_item.question }}</h2>
+        <p>{{ faq_item.answer }}</p>
+        <p>Дата добавления: {{ faq_item.created_date }}</p>
     </div>
-    
-    <div class="faq-item">
-        <h2>Вопрос 2?</h2>
-        <p>Ответ</p>
-        <p>Дата добавления: 15.09.2003</p>
-    </div>
+    {% endfor %}
 </section>
 
 {% endblock %}

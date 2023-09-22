@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
-from .models import Gym, GymMembership, News, Review, Schedule, GroupClass
+from .models import Faq, Gym, GymMembership, News, Review, Schedule, GroupClass
 from .forms import GymMembershipForm, GroupClassForm, ReviewForm
 from cart.forms import AddGroupClassForm
 from login.models import Client
@@ -128,7 +128,8 @@ def vacancies(request):
     return render(request, 'fitnessclub_core/vacancies.html')
 
 def faq(request):
-    return render(request, 'fitnessclub_core/faq.html')
+    faq = Faq.objects.all()
+    return render(request, 'fitnessclub_core/faq.html', {'faq': faq})
 
 def review_list(request):
     reviews = Review.objects.all()
