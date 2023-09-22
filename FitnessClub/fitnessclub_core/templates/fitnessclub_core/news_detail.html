@@ -5,8 +5,10 @@
 Подробнее о новости
 {% endblock %}
 {% block content %}
-<h1>{{ news.title }}</h1>
-<p>{{ news.content }}</p>
-<p>Дата публикации: {{ news.created_at }}</p>
+<section>
+    <h1>{{ news.title }}</h1>
+    <p>{{ news.content }}</p>
+    <p>Дата публикации: {{ news.created_at }}</p>
+</section>
 
 {% endblock %}

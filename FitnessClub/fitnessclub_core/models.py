@@ -1,5 +1,8 @@
 from django.db import models
 from django.urls import reverse
+from django.core.validators import MaxValueValidator, MinValueValidator
+
+from login.models import Client
     
 
 # class Trainer(models.Model):
@@ -68,3 +71,8 @@ class News(models.Model):
     def get_absolute_url(self):
         return reverse('fitnessclub_core:news_detail', args=[str(self.id)])
     
+class Review(models.Model):
+    reviewer = models.ForeignKey(Client, on_delete=models.CASCADE)
+    content = models.TextField()
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    created_date = models.DateField(auto_now_add=True)

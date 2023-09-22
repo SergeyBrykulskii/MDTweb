@@ -6,19 +6,21 @@
 {% endblock %}
 
 {% block content %}
-<h1>Отзывы</h1>
-
-<!-- Список существующих отзывов -->
-<div class="reviews">
-    {% for review in reviews %}
-    <div class="review">
-        <p><strong>Имя: {{ review.name }}</strong></p>
-        <p>Оценка: {{ review.rating }}/5</p>
-        <p>{{ review.text }}</p>
-        <p>Дата: {{ review.date }}</p>
+<section>
+    <h1>Отзывы</h1>
+    
+    <!-- Список существующих отзывов -->
+    <div class="reviews">
+        {% for review in reviews %}
+        <div class="review">
+            <p><strong>Имя: {{ review.reviewer }}</strong></p>
+            <p>Оценка: {{ review.rating }}/5</p>
+            <p>{{ review.content }}</p>
+            <p>Дата: <datetime>{{ review.created_date }}</datetime></p>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</section>
 
 <!-- Кнопка "Добавить отзыв" -->
 <a href="/add_review" class="btn btn-primary">Добавить отзыв</a>
