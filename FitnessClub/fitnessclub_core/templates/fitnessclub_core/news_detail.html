@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Подробнее о новости
+{% endblock %}
+{% block content %}
+<h1>{{ news.title }}</h1>
+<p>{{ news.content }}</p>
+<p>Дата публикации: {{ news.created_at }}</p>
+
+{% endblock %}

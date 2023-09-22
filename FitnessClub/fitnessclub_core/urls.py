@@ -15,6 +15,7 @@ urlpatterns = [
     path('about_us/', views.about_us, name='about_us'),
     path('promotions', views.promotions, name='promotions'),
     path('news_list/', views.news_list, name='news_list'),
+    path('news_detail/<int:id>/', views.news_detail, name='news_detail'),
     path('employees/', views.employee_list, name='employee_list'),
     path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
     path('vacancies/', views.vacancies, name='vacancies'),

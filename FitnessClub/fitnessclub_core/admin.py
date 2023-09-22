@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GymMembership, Gym, Schedule, GroupClass
+from .models import GymMembership, Gym, Schedule, GroupClass, News
 
 class GroupClassInline(admin.TabularInline):
     model = GroupClass
@@ -35,3 +35,8 @@ class GroupClassAdmin(admin.ModelAdmin):
     list_filter = ['gym']
     fields = [('name', 'description'), 'gym']
 
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    list_display = ['title', 'preview', 'created_at']
+    fields = [('title', 'preview'), 'content', 'created_at']
+    readonly_fields = ['created_at']

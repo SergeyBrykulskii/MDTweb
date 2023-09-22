@@ -109,6 +109,10 @@ def news_list(request):
     news_list = News.objects.all()
     return render(request, 'fitnessclub_core/news_list.html', {'news_list': news_list})
 
+def news_detail(request, id):
+    news = get_object_or_404(News, id=id)
+    return render(request, 'fitnessclub_core/news_detail.html', {'news': news})
+
 def employee_list(request):
     employees = Client.objects.filter(is_staff=True)
     return render(request, 'fitnessclub_core/employee_list.html', {'employees': employees})

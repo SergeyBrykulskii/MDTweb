@@ -61,7 +61,10 @@ class GroupClass(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=200)
+    preview = models.TextField(default="")
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    # возможно стоит добавить поле с картинкой
+    
+    def get_absolute_url(self):
+        return reverse('fitnessclub_core:news_detail', args=[str(self.id)])
     
