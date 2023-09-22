@@ -12,7 +12,9 @@
             <div class="employee">
                 <h2>{{ employee.username }}</h2>
                 <p>Email: {{ employee.email }}</p>
+
                 <!-- Добавить еще инфы, возможно фото -->
+                <img src="{% static  employee.photo.url %}" alt="Фото сотрудника">
             </div>
         {% endfor %}
     </div>
