@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'fitnessclub_core',
     'login',
     'cart',
+    'statistic',
     'order',
 ]
 

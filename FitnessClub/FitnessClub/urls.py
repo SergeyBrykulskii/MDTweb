@@ -22,5 +22,6 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('order/', include('order.urls')),
     path('cart/', include('cart.urls')),
+    path('statistic/', include('statistic.urls')),
     path('', include('fitnessclub_core.urls')),
 ]
