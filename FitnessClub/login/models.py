@@ -9,7 +9,7 @@ class Client(AbstractUser):
     phone_number = models.CharField(max_length=25, unique=True)
     address = models.CharField(max_length=100)
     birthday = models.DateField()
-    photo = models.ImageField(upload_to='person_photo/', blank=True, null=True)
+    photo = models.ImageField(upload_to='images/person_photo/', blank=True, null=True)
 
     REQUIRED_FIELDS = ['email', 'first_name', 'last_name', 'address', 'birthday', 'phone_number', 'photo']
     USERNAME_FIELD = 'username'
