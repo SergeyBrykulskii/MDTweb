@@ -7,7 +7,6 @@ F-club
 
 {% block content %}
 
-
 <section>
     <h1>Краткая информация о последней размещенной новости</h1>
     <div>
@@ -23,6 +22,19 @@ F-club
         <img src="{% static 'images/Ad2.png' %}" width="350" height="350" alt="Баннер_2">
         <img src="{% static 'images/Ad3.png' %}" width="350" height="350" alt="Баннер_3">
     </div>
+</section>
+
+<section>
+    <h1>Кликабельная карта</h1>
+    <img src="{% static 'images/world_map.png' %}" alt="Карта" usemap="#imagemap">
+
+    <map name="imagemap">
+        <area shape="rect" coords="50,30,220,200" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0" alt="Северная Америка">
+        <area shape="rect" coords="170,220,270,330" href="https://ru.wikipedia.org/wiki/%D0%AE%D0%B6%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0" alt="Южная Америка">
+        <area shape="rect" coords="330,30,630,170" href="https://ru.wikipedia.org/wiki/%D0%95%D0%B2%D1%80%D0%B0%D0%B7%D0%B8%D1%8F" alt="Евразия">
+        <area shape="rect" coords="310,180,430,310" href="https://ru.wikipedia.org/wiki/%D0%90%D1%84%D1%80%D0%B8%D0%BA%D0%B0" alt="Африка">
+        <area shape="rect" coords="550,250,660,380" href="https://clck.ru/35pot4" alt="Австралия">
+     </map>
 </section>
 
 <section>
