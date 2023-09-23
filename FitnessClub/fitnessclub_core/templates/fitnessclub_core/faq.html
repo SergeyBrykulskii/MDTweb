@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block title %}
-Словарь терминов и понятий
+Часто задаваемые вопросы
 {% endblock %}
 
 {% block content %}
 <section>
-    <h1>Словарь терминов и понятий</h1>
+    <h1>Часто задаваемые вопросы</h1>
     {% for faq_item in faq %}
     <div class="faq-item">
         <h2>{{ faq_item.question }}</h2>

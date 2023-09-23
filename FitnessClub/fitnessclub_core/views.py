@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.decorators import login_required
+import requests
+
+from .urls_api import URLS_API
 from .models import Faq, Gym, GymMembership, News, Review, Schedule, GroupClass
 from .forms import GymMembershipForm, GroupClassForm, ReviewForm
 from cart.forms import AddGroupClassForm
@@ -147,3 +150,17 @@ def add_review(request):
     else:
         form = ReviewForm()
     return render(request, 'fitnessclub_core/add_review.html', {'form': form})
+
+def experimental_page(request):
+    dog_response = requests.get(URLS_API['random_dog'])
+    joke_response = requests.get(URLS_API['random_joke'])
+    
+    dog_img_url = ''
+    if dog_response.status_code == 200:
+        dog_img_url = dog_response.json()['message']
+
+    joke = ''
+    if joke_response.status_code == 200:
+        joke = joke_response.json()['setup'] + ' ' + joke_response.json()['punchline']
+
+    return render(request, 'fitnessclub_core/experimental_page.html', {'dog_img_url': dog_img_url, 'joke': joke})

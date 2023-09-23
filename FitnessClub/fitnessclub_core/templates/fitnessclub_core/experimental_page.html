@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Html эксперименты
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <hr>
+    <img src="{{ dog_img_url }}" alt="Cute dog" style="width: 150px; height: 150px;">
+    <hr>
+    <p>{{ joke }}</p>
+</section>
+
+{% endblock %}
