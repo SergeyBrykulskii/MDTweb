@@ -20,17 +20,19 @@
 
 <section>
     <h2>Логотип</h2>
-    <div itemscope itemtype="http://schema.org/ImageObject">
+    <div class='club-logo' itemscope itemtype="http://schema.org/ImageObject">
         <img src="{% static 'images/logo.png' %}" alt="Логотип" width="200" height="200" itemprop="contentUrl">
         <meta itemprop="name" content="Логотип F-club">
     </div>
     
     <h2>Видео</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4-zjQvTDnbw?si=Zbc-UskMudW2-syU"
+    <div class="promo-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4-zjQvTDnbw?si=Zbc-UskMudW2-syU"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
-
+    </div>
+        
     <!-- класс на будущее -->
     <blockquote class="poem">
         <i>
@@ -44,41 +46,45 @@
 <hr>
 
 <section>
-    <h2>История по годам</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Год</th>
+    <div class="club-history">
+        <h2>История по годам</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Год</th>
                 <th>Событие</th>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><time datetime="2003-09-03">Сентябрь 3, 2003</time></td>
-                <td>Появление первого зала сети <abbr>ФСК</abbr> <q>Поехали</q></td>
-            </tr>
-            <tr>
-                <td><time datetime="2008-10-03">Октябрь 3, 2008</time></td>
-                <td>Крупная городская сеть</td>
-            </tr>
-            <tr>
-                <td><time datetime="2023-08-12">Август 12, 2023</time></td>
-                <td>Филиалы в 20 странах на 3 континентах</td>
-            </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><time datetime="2003-09-03">Сентябрь 3, 2003</time></td>
+                    <td>Появление первого зала сети <abbr>ФСК</abbr> <q>Поехали</q></td>
+                </tr>
+                <tr>
+                    <td><time datetime="2008-10-03">Октябрь 3, 2008</time></td>
+                    <td>Крупная городская сеть</td>
+                </tr>
+                <tr>
+                    <td><time datetime="2023-08-12">Август 12, 2023</time></td>
+                    <td>Филиалы в 20 странах на 3 континентах</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 <hr>
 
 <section>
-    <h1>Сертификат</h1>
-    <p>Настоящим удостоверяется, что</p>
-    <h2>Фитнес Клуб "F-club"</h2>
-    <p>был признан сертифицированным фитнес-клубом в соответствии с высокими стандартами качества и здоровья.</p>
-    <p>Сертификат выдан: 22 сентября 2023 года</p>
-    <p>Срок действия: Бессрочно</p>
-    <p>Сертификационный номер: 123456789</p>
-    <p>Подпись: ___________________________________________</p>
+    <div class="certificate">
+        <h1>Сертификат</h1>
+        <p>Настоящим удостоверяется, что</p>
+        <h2>Фитнес Клуб "F-club"</h2>
+        <p>был признан сертифицированным фитнес-клубом в соответствии с высокими стандартами качества оказываемых услуг.</p>
+        <p>Сертификат выдан: 22 сентября 2023 года</p>
+        <p>Срок действия: Бессрочно</p>
+        <p>Сертификационный номер: 123456789</p>
+        <p>Подпись: _______________________________________</p>
+    </div>
 
     <h2 id="contacts">Реквизиты</h2>
     <address itemscope itemtype="http://schema.org/PostalAddress">
