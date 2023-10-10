@@ -1,0 +1,37 @@
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+
+.news-card {
+    flex: 0 0 calc(33.33% - 20px); 
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+
+.news-card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+  
+.news-card p {
+    max-height: 80px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+  
+  
+.news-card a {
+    display: block;
+    margin-top: 10px;
+    color: #0074cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+  

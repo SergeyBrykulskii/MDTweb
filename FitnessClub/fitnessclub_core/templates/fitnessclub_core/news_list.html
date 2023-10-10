@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head %}
+<link href="{% static 'css/news_list.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}
 Новости
 {% endblock %}
+
 {% block content %}
 <h1>Новости</h1>
 <section>
@@ -14,7 +19,6 @@
             <p>{{ news.preview }}</p>
             <a href="{{ news.get_absolute_url }}">Читать далее</a>
         </div>
-        <hr>
         {% endfor %}
     </div>
 </section>
