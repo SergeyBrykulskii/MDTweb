@@ -1,18 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block head %}
+<link href="{% static 'css/faq.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}
 Часто задаваемые вопросы
 {% endblock %}
 
 {% block content %}
 <section>
-    <h1>Часто задаваемые вопросы</h1>
-    {% for faq_item in faq %}
-    <div class="faq-item">
-        <h2>{{ faq_item.question }}</h2>
-        <p>{{ faq_item.answer }}</p>
-        <p>Дата добавления: {{ faq_item.created_date }}</p>
+    <div class="faq-container">
+        <h1>Часто задаваемые вопросы</h1>
+        {% for faq_item in faq %}
+        <div class="faq-item">
+            <h2>{{ faq_item.question }}</h2>
+            <p>{{ faq_item.answer }}</p>
+            <p>Дата добавления: {{ faq_item.created_date }}</p>
+        </div>
     </div>
     {% endfor %}
 </section>
