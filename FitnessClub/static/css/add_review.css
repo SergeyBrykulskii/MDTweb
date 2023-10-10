@@ -1,0 +1,20 @@
+section form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
