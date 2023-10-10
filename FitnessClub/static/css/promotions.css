@@ -1,0 +1,37 @@
+.current_promo ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.current_promo li {
+    position: relative;
+    background-color: #dff0d8; 
+    padding: 10px; 
+    margin-bottom: 5px; /
+}
+
+.current_promo li::before {
+    content: '\26A1'; 
+    font-size: 20px; 
+    color: #ff9900; 
+    margin-right: 5px; 
+}
+
+.archive_promo ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.archive_promo li {
+    position: relative;
+    background-color: #f2dede; 
+    padding: 10px; 
+    margin-bottom: 5px; 
+}
+
+.archive_promo li::before {
+    content: '\1F511'; 
+    font-size: 20px; 
+    color: #d9534f; 
+    margin-right: 5px;
+}
