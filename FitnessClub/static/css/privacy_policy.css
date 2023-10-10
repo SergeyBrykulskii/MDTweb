@@ -20,14 +20,9 @@ p {
   
 p:last-child {
     margin-bottom: 0;
-}
-  
-section p:nth-of-type(3) {
-    font-weight: bold;
-}
-  
+} 
 
-section p:nth-of-type(5) {
+section p:nth-of-type(8) {
     font-weight: bold;
 }
   

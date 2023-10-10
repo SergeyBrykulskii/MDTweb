@@ -1,0 +1,22 @@
+.vacancy-container {
+    width: 100%;
+}
+
+.vacancy {
+    width: 30%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.vacancy-title {
+    font-weight: bold;
+}
+
+.vacancy-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
