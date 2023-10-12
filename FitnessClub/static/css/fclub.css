@@ -27,7 +27,7 @@
 
 .horizontal-list li figcaption {
     text-shadow: 1px 1px #4f8baf;
-    font-family: Calibry;
+    font-family:'Courier New', Courier, monospace;
     font-kerning: normal;
     font-size: 30px;
     font-weight: bold;
@@ -80,4 +80,15 @@
 #latest-news-section {
     position: relative;
     margin-top: 75px;
+}
+
+@media (max-width: 575px)
+{
+  .round {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px; 
+    border: 3px solid red; 
+    box-shadow: 0 0 10px #666; 
+}
 }

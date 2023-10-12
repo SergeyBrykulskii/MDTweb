@@ -7,6 +7,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url("/static/images/site_background.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5 , h6 {
@@ -163,35 +167,6 @@ footer .logo {
     overflow:hidden;
 }
 
-#sidebar {
-    width:220px;
-    padding:30px 20px 0 0;
-    float:left;
-}
-
-#sidebar ul{
-    margin:0;
-    padding:0;
-}
-
-#sidebar ul li {
-    margin:0;
-    list-style:none;
-    padding:10px 14px;
-}
-
-#sidebar ul li a {
-    display:block;
-}
-
-#sidebar ul li.selected {
-    background:#5993bb;
-    border-radius:4px;
-}
-
-#sidebar ul li.selected a {
-    color:#fff;
-}
 
 main {
     flex-grow: 1;
@@ -202,4 +177,51 @@ main {
     width: 96%;
     margin-right:-220px;
     overflow:hidden;
+}
+
+/* Не посещенная ссылка */
+a.logo:link {
+    color: #0000FF;
+}
+
+/* Посещенная ссылка */
+a.logo:visited {
+    color: #800080;
+}
+
+/* Состояние при наведении курсора */
+a.logo:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+/* Состояние при нажатии */
+a.logo:active {
+    color: #008000;
+}
+
+/* Состояние в фокусе */
+a.logo:focus {
+    outline: 2px solid #FFA500;
+}
+
+/* Общие стили для всех ссылок */
+a.logo {
+    text-decoration: none;
+    margin: 0 10px; /* Пример отступов между ссылками */
+}
+
+/* Дополнительные стили для ссылок в футере, чтобы они выглядели отлично от ссылок в меню */
+footer a.logo {
+    color: #808080;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
 }

@@ -13,13 +13,14 @@ Html эксперименты
 
 <section>
     <hr>
-    <img src="{{ dog_img_url }}" alt="Cute dog" style="width: 150px; height: 150px;">
+    <img class="dog_img" src="{{ dog_img_url }}" alt="Cute dog" style="width: 150px; height: 150px;">
     <hr>
     <p>{{ joke }}</p>
 </section>
 
 <section>
-    <table border="1">
+    <table>
+        <caption>Заголовок таблицы</caption>
         <tr>
             <th rowspan="2">Заголовок 1</th>
             <th colspan="2">Заголовок 2</th>
@@ -51,16 +52,24 @@ Html эксперименты
 </section>
 
 <section>
-    <p>Это <sup>верхний индекс</sup> и <sub>нижний индекс</sub></p>
-    <p>Это <mark>выделенный текст</mark></p>
-    <p>Это <del>зачеркнутый текст</del> и <ins>подчеркнутый текст</ins></p>
-    <p>Это <strong>важный текст</strong> и <em>выделенный текст</em></p>
-    <p>Это <q>цитата</q> и <abbr title="HyperText Markup Language">HTML</abbr></p>
-    <p>Это <cite>цитируемая работа</cite> и <dfn>определение</dfn></p>
-    <p>Это <s>перечеркнутый текст</s> и <kbd>клавиша клавиатуры</kbd></p>
-    <p>Это <var>переменная</var> и <samp>выходные данные</samp></p>
-    <article>
-        Важная информация в тексте article
+    <p class="index">Это <sup>верхний индекс</sup> и <sub>нижний индекс</sub></p>
+    <p class="highlight">Это <mark>выделенный текст</mark></p>
+    <p class="strike">Это <del>зачеркнутый текст</del> и <ins>подчеркнутый текст</ins></p>
+    <p class="strong-em">Это <strong>важный текст</strong> и <em>выделенный текст</em></p>
+    <p class="quote-abbr">Это <q>цитата</q> и <abbr title="HyperText Markup Language">HTML</abbr></p>
+    <p class="cite-dfn">Это <cite>цитируемая работа</cite> и <dfn>определение</dfn></p>
+    <p class="strike-kbd">Это <s>перечеркнутый текст</s> и <kbd>клавиша клавиатуры</kbd></p>
+    <p class="variable-samp">Это <var>переменная</var> и <samp>выходные данные</samp></p>
+    <article class="var">
+        А также стремящиеся вытеснить традиционное производство, нанотехнологии призваны к ответу. Значимость этих
+        проблем настолько очевидна, что курс на социально-ориентированный национальный проект, а также свежий взгляд на
+        привычные вещи — безусловно открывает новые горизонты для приоретизации разума над эмоциями. Как принято
+        считать, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом —
+        превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Сложно сказать, почему
+        предприниматели в сети интернет превращены в посмешище, хотя само их существование приносит несомненную пользу
+        обществу. Кстати, независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга
+        над разумом и должны быть подвергнуты целой серии независимых исследований. Кстати, реплицированные с зарубежных
+        источников, современные исследования указаны как претенденты на роль ключевых факторов.
     </article>
 </section>
 <section>
@@ -76,11 +85,50 @@ Html эксперименты
     <br>
     <meter id="diskSpace" value="75" min="0" max="100">75%</meter>
 </section>
-<section>
-    <aside>
-        <p>Это боковая панель</p>
-        <p>Это боковая панель</p>
-        <p>Это боковая панель</p>
-    </aside>
-</section>
+<form>
+    <label for="username">Username:</label>
+    <input disabled type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input required type="password" id="password" name="password" minlength="8" required>
+
+    <label for="email">Email:</label>
+    <input required type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" required>
+
+    <label for="subscribe">Subscribe to newsletter:</label>
+    <input type="checkbox" id="subscribe" name="subscribe" checked>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
+<article>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <blockquote class="context">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <p>Select some text in this paragraph to see the style change.</p>
+</article>
+
+<h1>Заголовок 1</h1>
+<h2>Заголовок 2</h2>
+<p>Это обычный текст, который мы оформляем разными стилями.</p>
+<p>Еще один абзац для демонстрации различных настроек.</p>
+<div class="block">
+    <p>Этот текст внутри блока с другими стилями.</p>
+</div>
 {% endblock %}

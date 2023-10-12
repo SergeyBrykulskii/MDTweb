@@ -14,6 +14,7 @@ caption {
     font-weight: bold;
     text-align: center;
     padding: 10px;
+    caption-side: bottom;
 }
 
 th, td {
@@ -31,4 +32,124 @@ th, td:nth-child(odd) {
 table {
     margin: 0 auto;
     width: 80%;
+}
+
+.dog_img {
+    margin-top: 100px;
+}
+
+/* Стили для доступных элементов формы */
+input:enabled,
+select:enabled,
+textarea:enabled,
+button:enabled {
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Стили для обязательных элементов формы */
+input:required,
+select:required,
+textarea:required {
+    border: 2px solid #FF0000;
+}
+
+/* Стили для заблокированных элементов формы */
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Стили для элементов со значениями вне диапазона */
+input:out-of-range {
+    border: 2px solid #FF0000;
+}
+
+/* Стили для включенных флажков и переключателей */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ /* Выделение первой буквы (или строки) текста абзаца в статье */
+ article p:first-child::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Добавление контекста в начале и конце фрагмента текста */
+.context {
+    quotes: "«" "»";
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+/* Оформление маркерами – символами юникода */
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "\2022"; /* Черная окружность (Bullet) */
+    color: #4CAF50;
+    margin-right: 8px;
+}
+
+/* Изменение стиля при выделении текста */
+::selection {
+    background-color: #4CAF50;
+    color: white;
+}
+
+h1, h2, p {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+}
+
+p {
+    color: #777;
+}
+
+p:first-of-type {
+    text-indent: 20px; /* Красная строка */
+}
+
+p:nth-of-type(2) {
+    letter-spacing: 2px; /* Интервал между символами */
+    word-spacing: 5px; /* Интервал между словами */
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+p:last-of-type {
+    font-variant: small-caps; /* Капитель */
+}
+
+.block {
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
 }

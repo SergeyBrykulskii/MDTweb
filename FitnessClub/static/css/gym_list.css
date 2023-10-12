@@ -1,0 +1,95 @@
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+[lang^="en"] {
+    color: blue;
+}
+
+[lang$="en"] {
+    color: green;
+}
+
+[title="HyperText Markup Language"] {
+    font-weight: bold;
+}
+
+[class*="important"] {
+    background-color: yellow;
+}
+
+[class="kbd"] {
+    font-family: monospace;
+}
+
+[class^="output"] {
+    color: purple;
+}
+
+[class$="output"] {
+    font-style: italic;
+}
+
+[class="var"] {
+    font-style: italic;
+    color: brown;
+}
+
+article[class*="var"] {
+    color: brown;
+    text-decoration: underline;
+}
+
+.index {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+.highlight {
+    background-color: #ffcc00;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.strong-em {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.quote-abbr {
+    quotes: "«" "»";
+    font-style: italic;
+}
+
+.cite-dfn {
+    font-style: italic;
+}
+
+.strike-kbd {
+    text-decoration: line-through;
+}
+
+.variable-samp {
+    font-family: monospace;
+    font-style: italic;
+}
+
+.var p:first-child {
+    font-weight: bold;
+}

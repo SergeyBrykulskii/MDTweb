@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head %}
+<link href="{% static 'css/gym_list.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Главная
+{% endblock %}
+
 {% block content %}
 <h1>Gym List</h1>
 

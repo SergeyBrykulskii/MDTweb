@@ -1,4 +1,7 @@
 .vacancy-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-gap: 20px;
     width: 100%;
 }
 
